@@ -1,0 +1,2173 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0618.0924                               -->
+<workbook original-version='18.1' source-build='2024.1.4 (20241.24.0618.0924)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='allDogDescriptions+' inline='true' name='federated.0hg0klg0w2eqzr17zo7dz056j0sf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='allDogDescriptions' name='textscan.0mf373g0ycmfpk14now000nz06jk'>
+            <connection class='textscan' directory='C:/Users/Admin/Desktop/STW7082CEM/dataset' filename='allDogDescriptions.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[allDogDescriptions.csv].[index]' />
+              <expression op='[movesByLocation.csv1].[index]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[allDogDescriptions.csv].[id]' />
+                <expression op='[dogTravel.csv+].[id_dog_desc]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='index' ordinal='0' />
+                <column datatype='integer' name='id' ordinal='1' />
+                <column datatype='string' name='org_id' ordinal='2' />
+                <column datatype='string' name='url' ordinal='3' />
+                <column datatype='string' name='species' ordinal='4' />
+                <column datatype='string' name='breed_primary' ordinal='5' />
+                <column datatype='string' name='breed_secondary' ordinal='6' />
+                <column datatype='boolean' name='breed_mixed' ordinal='7' />
+                <column datatype='boolean' name='breed_unknown' ordinal='8' />
+                <column datatype='string' name='color_primary' ordinal='9' />
+                <column datatype='string' name='color_secondary' ordinal='10' />
+                <column datatype='string' name='color_tertiary' ordinal='11' />
+                <column datatype='string' name='age' ordinal='12' />
+                <column datatype='string' name='sex' ordinal='13' />
+                <column datatype='string' name='size' ordinal='14' />
+                <column datatype='string' name='coat' ordinal='15' />
+                <column datatype='boolean' name='fixed' ordinal='16' />
+                <column datatype='boolean' name='house_trained' ordinal='17' />
+                <column datatype='string' name='declawed' ordinal='18' />
+                <column datatype='boolean' name='special_needs' ordinal='19' />
+                <column datatype='boolean' name='shots_current' ordinal='20' />
+                <column datatype='boolean' name='env_children' ordinal='21' />
+                <column datatype='boolean' name='env_dogs' ordinal='22' />
+                <column datatype='boolean' name='env_cats' ordinal='23' />
+                <column datatype='string' name='name' ordinal='24' />
+                <column datatype='string' name='status' ordinal='25' />
+                <column datatype='string' name='posted' ordinal='26' />
+                <column datatype='string' name='contact_city' ordinal='27' />
+                <column datatype='string' name='contact_state' ordinal='28' />
+                <column datatype='real' name='contact_zip' ordinal='29' />
+                <column datatype='string' name='contact_country' ordinal='30' />
+                <column datatype='integer' name='stateQ' ordinal='31' />
+                <column datatype='date' name='accessed' ordinal='32' />
+                <column datatype='string' name='description' ordinal='33' />
+              </columns>
+            </relation>
+            <relation all='true' name='dogTravel.csv+' type='union'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='index' />
+                <column datatype='integer' name='id' />
+                <column datatype='string' name='contact_city' />
+                <column datatype='string' name='contact_state_travel' />
+                <column datatype='string' name='found' />
+                <column datatype='string' name='manual' />
+                <column datatype='boolean' name='remove' />
+                <column datatype='boolean' name='still_there' />
+                <column datatype='integer' name='id_dog_desc' />
+                <column datatype='string' name='location' />
+                <column datatype='real' name='exported' />
+                <column datatype='real' name='imported' />
+                <column datatype='real' name='total' />
+                <column datatype='boolean' name='inUS' />
+                <column datatype='string' name='Table Name' />
+              </columns>
+              <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='dogTravel.csv' table='[dogTravel#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='string' name='contact_city' ordinal='2' />
+                  <column datatype='string' name='contact_state_travel' ordinal='3' />
+                  <column datatype='string' name='found' ordinal='4' />
+                  <column datatype='string' name='manual' ordinal='5' />
+                  <column datatype='boolean' name='remove' ordinal='6' />
+                  <column datatype='boolean' name='still_there' ordinal='7' />
+                  <column datatype='integer' name='id_dog_desc' ordinal='8' />
+                </columns>
+              </relation>
+              <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv' table='[movesByLocation#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='string' name='location' ordinal='1' />
+                  <column datatype='real' name='exported' ordinal='2' />
+                  <column datatype='real' name='imported' ordinal='3' />
+                  <column datatype='real' name='total' ordinal='4' />
+                  <column datatype='boolean' name='inUS' ordinal='5' />
+                </columns>
+              </relation>
+            </relation>
+          </relation>
+          <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv1' table='[movesByLocation#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='index' ordinal='0' />
+              <column datatype='string' name='location' ordinal='1' />
+              <column datatype='real' name='exported' ordinal='2' />
+              <column datatype='real' name='imported' ordinal='3' />
+              <column datatype='real' name='total' ordinal='4' />
+              <column datatype='boolean' name='inUS' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='left' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[allDogDescriptions.csv].[index]' />
+              <expression op='[movesByLocation.csv1].[index]' />
+            </expression>
+          </clause>
+          <relation join='left' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[allDogDescriptions.csv].[id]' />
+                <expression op='[dogTravel.csv+].[id_dog_desc]' />
+              </expression>
+            </clause>
+            <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='index' ordinal='0' />
+                <column datatype='integer' name='id' ordinal='1' />
+                <column datatype='string' name='org_id' ordinal='2' />
+                <column datatype='string' name='url' ordinal='3' />
+                <column datatype='string' name='species' ordinal='4' />
+                <column datatype='string' name='breed_primary' ordinal='5' />
+                <column datatype='string' name='breed_secondary' ordinal='6' />
+                <column datatype='boolean' name='breed_mixed' ordinal='7' />
+                <column datatype='boolean' name='breed_unknown' ordinal='8' />
+                <column datatype='string' name='color_primary' ordinal='9' />
+                <column datatype='string' name='color_secondary' ordinal='10' />
+                <column datatype='string' name='color_tertiary' ordinal='11' />
+                <column datatype='string' name='age' ordinal='12' />
+                <column datatype='string' name='sex' ordinal='13' />
+                <column datatype='string' name='size' ordinal='14' />
+                <column datatype='string' name='coat' ordinal='15' />
+                <column datatype='boolean' name='fixed' ordinal='16' />
+                <column datatype='boolean' name='house_trained' ordinal='17' />
+                <column datatype='string' name='declawed' ordinal='18' />
+                <column datatype='boolean' name='special_needs' ordinal='19' />
+                <column datatype='boolean' name='shots_current' ordinal='20' />
+                <column datatype='boolean' name='env_children' ordinal='21' />
+                <column datatype='boolean' name='env_dogs' ordinal='22' />
+                <column datatype='boolean' name='env_cats' ordinal='23' />
+                <column datatype='string' name='name' ordinal='24' />
+                <column datatype='string' name='status' ordinal='25' />
+                <column datatype='string' name='posted' ordinal='26' />
+                <column datatype='string' name='contact_city' ordinal='27' />
+                <column datatype='string' name='contact_state' ordinal='28' />
+                <column datatype='real' name='contact_zip' ordinal='29' />
+                <column datatype='string' name='contact_country' ordinal='30' />
+                <column datatype='integer' name='stateQ' ordinal='31' />
+                <column datatype='date' name='accessed' ordinal='32' />
+                <column datatype='string' name='description' ordinal='33' />
+              </columns>
+            </relation>
+            <relation all='true' name='dogTravel.csv+' type='union'>
+              <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                <column datatype='integer' name='index' />
+                <column datatype='integer' name='id' />
+                <column datatype='string' name='contact_city' />
+                <column datatype='string' name='contact_state_travel' />
+                <column datatype='string' name='found' />
+                <column datatype='string' name='manual' />
+                <column datatype='boolean' name='remove' />
+                <column datatype='boolean' name='still_there' />
+                <column datatype='integer' name='id_dog_desc' />
+                <column datatype='string' name='location' />
+                <column datatype='real' name='exported' />
+                <column datatype='real' name='imported' />
+                <column datatype='real' name='total' />
+                <column datatype='boolean' name='inUS' />
+                <column datatype='string' name='Table Name' />
+              </columns>
+              <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='dogTravel.csv' table='[dogTravel#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='string' name='contact_city' ordinal='2' />
+                  <column datatype='string' name='contact_state_travel' ordinal='3' />
+                  <column datatype='string' name='found' ordinal='4' />
+                  <column datatype='string' name='manual' ordinal='5' />
+                  <column datatype='boolean' name='remove' ordinal='6' />
+                  <column datatype='boolean' name='still_there' ordinal='7' />
+                  <column datatype='integer' name='id_dog_desc' ordinal='8' />
+                </columns>
+              </relation>
+              <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv' table='[movesByLocation#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='string' name='location' ordinal='1' />
+                  <column datatype='real' name='exported' ordinal='2' />
+                  <column datatype='real' name='imported' ordinal='3' />
+                  <column datatype='real' name='total' ordinal='4' />
+                  <column datatype='boolean' name='inUS' ordinal='5' />
+                </columns>
+              </relation>
+            </relation>
+          </relation>
+          <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv1' table='[movesByLocation#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='index' ordinal='0' />
+              <column datatype='string' name='location' ordinal='1' />
+              <column datatype='real' name='exported' ordinal='2' />
+              <column datatype='real' name='imported' ordinal='3' />
+              <column datatype='real' name='total' ordinal='4' />
+              <column datatype='boolean' name='inUS' ordinal='5' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Table Name]' value='[dogTravel.csv+].[Table Name]' />
+          <map key='[accessed]' value='[allDogDescriptions.csv].[accessed]' />
+          <map key='[age]' value='[allDogDescriptions.csv].[age]' />
+          <map key='[breed_mixed]' value='[allDogDescriptions.csv].[breed_mixed]' />
+          <map key='[breed_primary]' value='[allDogDescriptions.csv].[breed_primary]' />
+          <map key='[breed_secondary]' value='[allDogDescriptions.csv].[breed_secondary]' />
+          <map key='[breed_unknown]' value='[allDogDescriptions.csv].[breed_unknown]' />
+          <map key='[coat]' value='[allDogDescriptions.csv].[coat]' />
+          <map key='[color_primary]' value='[allDogDescriptions.csv].[color_primary]' />
+          <map key='[color_secondary]' value='[allDogDescriptions.csv].[color_secondary]' />
+          <map key='[color_tertiary]' value='[allDogDescriptions.csv].[color_tertiary]' />
+          <map key='[contact_city (dogTravel.csv+)]' value='[dogTravel.csv+].[contact_city]' />
+          <map key='[contact_city]' value='[allDogDescriptions.csv].[contact_city]' />
+          <map key='[contact_country]' value='[allDogDescriptions.csv].[contact_country]' />
+          <map key='[contact_state]' value='[allDogDescriptions.csv].[contact_state]' />
+          <map key='[contact_state_travel]' value='[dogTravel.csv+].[contact_state_travel]' />
+          <map key='[contact_zip]' value='[allDogDescriptions.csv].[contact_zip]' />
+          <map key='[declawed]' value='[allDogDescriptions.csv].[declawed]' />
+          <map key='[description]' value='[allDogDescriptions.csv].[description]' />
+          <map key='[env_cats]' value='[allDogDescriptions.csv].[env_cats]' />
+          <map key='[env_children]' value='[allDogDescriptions.csv].[env_children]' />
+          <map key='[env_dogs]' value='[allDogDescriptions.csv].[env_dogs]' />
+          <map key='[exported (movesByLocation.csv1)]' value='[movesByLocation.csv1].[exported]' />
+          <map key='[exported]' value='[dogTravel.csv+].[exported]' />
+          <map key='[fixed]' value='[allDogDescriptions.csv].[fixed]' />
+          <map key='[found]' value='[dogTravel.csv+].[found]' />
+          <map key='[house_trained]' value='[allDogDescriptions.csv].[house_trained]' />
+          <map key='[id (dogTravel.csv+)]' value='[dogTravel.csv+].[id]' />
+          <map key='[id]' value='[allDogDescriptions.csv].[id]' />
+          <map key='[id_dog_desc]' value='[dogTravel.csv+].[id_dog_desc]' />
+          <map key='[imported (movesByLocation.csv1)]' value='[movesByLocation.csv1].[imported]' />
+          <map key='[imported]' value='[dogTravel.csv+].[imported]' />
+          <map key='[inUS (movesByLocation.csv1)]' value='[movesByLocation.csv1].[inUS]' />
+          <map key='[inUS]' value='[dogTravel.csv+].[inUS]' />
+          <map key='[index (dogTravel.csv+)]' value='[dogTravel.csv+].[index]' />
+          <map key='[index (movesByLocation.csv1)]' value='[movesByLocation.csv1].[index]' />
+          <map key='[index]' value='[allDogDescriptions.csv].[index]' />
+          <map key='[location (movesByLocation.csv1)]' value='[movesByLocation.csv1].[location]' />
+          <map key='[location]' value='[dogTravel.csv+].[location]' />
+          <map key='[manual]' value='[dogTravel.csv+].[manual]' />
+          <map key='[name]' value='[allDogDescriptions.csv].[name]' />
+          <map key='[org_id]' value='[allDogDescriptions.csv].[org_id]' />
+          <map key='[posted]' value='[allDogDescriptions.csv].[posted]' />
+          <map key='[remove]' value='[dogTravel.csv+].[remove]' />
+          <map key='[sex]' value='[allDogDescriptions.csv].[sex]' />
+          <map key='[shots_current]' value='[allDogDescriptions.csv].[shots_current]' />
+          <map key='[size]' value='[allDogDescriptions.csv].[size]' />
+          <map key='[special_needs]' value='[allDogDescriptions.csv].[special_needs]' />
+          <map key='[species]' value='[allDogDescriptions.csv].[species]' />
+          <map key='[stateQ]' value='[allDogDescriptions.csv].[stateQ]' />
+          <map key='[status]' value='[allDogDescriptions.csv].[status]' />
+          <map key='[still_there]' value='[dogTravel.csv+].[still_there]' />
+          <map key='[total (movesByLocation.csv1)]' value='[movesByLocation.csv1].[total]' />
+          <map key='[total]' value='[dogTravel.csv+].[total]' />
+          <map key='[url]' value='[allDogDescriptions.csv].[url]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[org_id]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>org_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[url]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>url</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>species</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[species]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>species</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_primary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[breed_primary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_primary</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_secondary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[breed_secondary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_secondary</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_mixed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[breed_mixed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_mixed</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_unknown</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[breed_unknown]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_unknown</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_primary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_primary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_primary</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_secondary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_secondary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_secondary</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_tertiary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_tertiary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_tertiary</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sex]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>sex</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[size]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>size</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[coat]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>coat</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fixed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[fixed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>fixed</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>house_trained</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[house_trained]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>house_trained</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>declawed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[declawed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>declawed</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>special_needs</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[special_needs]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>special_needs</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shots_current</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[shots_current]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>shots_current</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_children</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_children]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_children</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_dogs</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_dogs]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_dogs</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_cats</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_cats]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_cats</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>posted</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[posted]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>posted</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_city]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_city</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_state]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_state</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_zip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contact_zip]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_zip</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_country]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_country</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stateQ</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[stateQ]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>stateQ</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accessed</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[accessed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>accessed</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index (dogTravel.csv+)]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id (dogTravel.csv+)]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_city (dogTravel.csv+)]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>contact_city</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_state_travel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_state_travel]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>contact_state_travel</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>found</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[found]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>found</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>manual</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[manual]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>manual</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>remove</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[remove]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>remove</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>still_there</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[still_there]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>still_there</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id_dog_desc</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id_dog_desc]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>id_dog_desc</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exported</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[exported]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>exported</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>imported</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[imported]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>imported</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>total</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inUS</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[inUS]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>inUS</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[dogTravel.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>exported</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[exported (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>exported</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>imported</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[imported (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>imported</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>total</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>inUS</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[inUS (movesByLocation.csv1)]</local-name>
+            <parent-name>[movesByLocation.csv1]</parent-name>
+            <remote-alias>inUS</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='allDogDescriptions.csv' datatype='table' name='[__tableau_internal_object_id__].[allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934]' role='measure' type='quantitative' />
+      <column caption='Accessed' datatype='date' name='[accessed]' role='dimension' type='ordinal' />
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Breed Mixed' datatype='boolean' name='[breed_mixed]' role='dimension' type='nominal' />
+      <column caption='Breed Primary' datatype='string' name='[breed_primary]' role='dimension' type='nominal' />
+      <column caption='Breed Secondary' datatype='string' name='[breed_secondary]' role='dimension' type='nominal' />
+      <column caption='Breed Unknown' datatype='boolean' name='[breed_unknown]' role='dimension' type='nominal' />
+      <column caption='Coat' datatype='string' name='[coat]' role='dimension' type='nominal' />
+      <column caption='Color Primary' datatype='string' name='[color_primary]' role='dimension' type='nominal' />
+      <column caption='Color Secondary' datatype='string' name='[color_secondary]' role='dimension' type='nominal' />
+      <column caption='Color Tertiary' datatype='string' name='[color_tertiary]' role='dimension' type='nominal' />
+      <column datatype='string' name='[contact_city (dogTravel.csv+)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Contact City' datatype='string' name='[contact_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Contact Country' datatype='string' name='[contact_country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Contact State' datatype='string' name='[contact_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Contact State Travel' datatype='string' name='[contact_state_travel]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Contact Zip' datatype='real' default-format='*00000' name='[contact_zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Declawed' datatype='string' name='[declawed]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Env Cats' datatype='boolean' name='[env_cats]' role='dimension' type='nominal' />
+      <column caption='Env Children' datatype='boolean' name='[env_children]' role='dimension' type='nominal' />
+      <column caption='Env Dogs' datatype='boolean' name='[env_dogs]' role='dimension' type='nominal' />
+      <column caption='Fixed' datatype='boolean' name='[fixed]' role='dimension' type='nominal' />
+      <column caption='Found' datatype='string' name='[found]' role='dimension' type='nominal' />
+      <column caption='House Trained' datatype='boolean' name='[house_trained]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Id Dog Desc' datatype='integer' name='[id_dog_desc]' role='dimension' type='ordinal' />
+      <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <column caption='Manual' datatype='string' name='[manual]' role='dimension' type='nominal' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Org Id' datatype='string' name='[org_id]' role='dimension' type='nominal' />
+      <column caption='Posted' datatype='string' name='[posted]' role='dimension' type='nominal' />
+      <column caption='Remove' datatype='boolean' name='[remove]' role='dimension' type='nominal' />
+      <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+      <column caption='Shots Current' datatype='boolean' name='[shots_current]' role='dimension' type='nominal' />
+      <column caption='Size' datatype='string' name='[size]' role='dimension' type='nominal' />
+      <column caption='Special Needs' datatype='boolean' name='[special_needs]' role='dimension' type='nominal' />
+      <column caption='Species' datatype='string' name='[species]' role='dimension' type='nominal' />
+      <column caption='State Q' datatype='integer' name='[stateQ]' role='measure' type='quantitative' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Still There' datatype='boolean' name='[still_there]' role='dimension' type='nominal' />
+      <column caption='Url' datatype='string' name='[url]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='allDogDescriptions.csv' id='allDogDescriptions.csv_F5379A3A749649ADB41CCEF435E20934'>
+            <properties context=''>
+              <relation join='left' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[allDogDescriptions.csv].[index]' />
+                    <expression op='[movesByLocation.csv1].[index]' />
+                  </expression>
+                </clause>
+                <relation join='left' type='join'>
+                  <clause type='join'>
+                    <expression op='='>
+                      <expression op='[allDogDescriptions.csv].[id]' />
+                      <expression op='[dogTravel.csv+].[id_dog_desc]' />
+                    </expression>
+                  </clause>
+                  <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+                    <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                      <column datatype='integer' name='index' ordinal='0' />
+                      <column datatype='integer' name='id' ordinal='1' />
+                      <column datatype='string' name='org_id' ordinal='2' />
+                      <column datatype='string' name='url' ordinal='3' />
+                      <column datatype='string' name='species' ordinal='4' />
+                      <column datatype='string' name='breed_primary' ordinal='5' />
+                      <column datatype='string' name='breed_secondary' ordinal='6' />
+                      <column datatype='boolean' name='breed_mixed' ordinal='7' />
+                      <column datatype='boolean' name='breed_unknown' ordinal='8' />
+                      <column datatype='string' name='color_primary' ordinal='9' />
+                      <column datatype='string' name='color_secondary' ordinal='10' />
+                      <column datatype='string' name='color_tertiary' ordinal='11' />
+                      <column datatype='string' name='age' ordinal='12' />
+                      <column datatype='string' name='sex' ordinal='13' />
+                      <column datatype='string' name='size' ordinal='14' />
+                      <column datatype='string' name='coat' ordinal='15' />
+                      <column datatype='boolean' name='fixed' ordinal='16' />
+                      <column datatype='boolean' name='house_trained' ordinal='17' />
+                      <column datatype='string' name='declawed' ordinal='18' />
+                      <column datatype='boolean' name='special_needs' ordinal='19' />
+                      <column datatype='boolean' name='shots_current' ordinal='20' />
+                      <column datatype='boolean' name='env_children' ordinal='21' />
+                      <column datatype='boolean' name='env_dogs' ordinal='22' />
+                      <column datatype='boolean' name='env_cats' ordinal='23' />
+                      <column datatype='string' name='name' ordinal='24' />
+                      <column datatype='string' name='status' ordinal='25' />
+                      <column datatype='string' name='posted' ordinal='26' />
+                      <column datatype='string' name='contact_city' ordinal='27' />
+                      <column datatype='string' name='contact_state' ordinal='28' />
+                      <column datatype='real' name='contact_zip' ordinal='29' />
+                      <column datatype='string' name='contact_country' ordinal='30' />
+                      <column datatype='integer' name='stateQ' ordinal='31' />
+                      <column datatype='date' name='accessed' ordinal='32' />
+                      <column datatype='string' name='description' ordinal='33' />
+                    </columns>
+                  </relation>
+                  <relation all='true' name='dogTravel.csv+' type='union'>
+                    <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                      <column datatype='integer' name='index' />
+                      <column datatype='integer' name='id' />
+                      <column datatype='string' name='contact_city' />
+                      <column datatype='string' name='contact_state_travel' />
+                      <column datatype='string' name='found' />
+                      <column datatype='string' name='manual' />
+                      <column datatype='boolean' name='remove' />
+                      <column datatype='boolean' name='still_there' />
+                      <column datatype='integer' name='id_dog_desc' />
+                      <column datatype='string' name='location' />
+                      <column datatype='real' name='exported' />
+                      <column datatype='real' name='imported' />
+                      <column datatype='real' name='total' />
+                      <column datatype='boolean' name='inUS' />
+                      <column datatype='string' name='Table Name' />
+                    </columns>
+                    <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='dogTravel.csv' table='[dogTravel#csv]' type='table'>
+                      <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                        <column datatype='integer' name='index' ordinal='0' />
+                        <column datatype='integer' name='id' ordinal='1' />
+                        <column datatype='string' name='contact_city' ordinal='2' />
+                        <column datatype='string' name='contact_state_travel' ordinal='3' />
+                        <column datatype='string' name='found' ordinal='4' />
+                        <column datatype='string' name='manual' ordinal='5' />
+                        <column datatype='boolean' name='remove' ordinal='6' />
+                        <column datatype='boolean' name='still_there' ordinal='7' />
+                        <column datatype='integer' name='id_dog_desc' ordinal='8' />
+                      </columns>
+                    </relation>
+                    <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv' table='[movesByLocation#csv]' type='table'>
+                      <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                        <column datatype='integer' name='index' ordinal='0' />
+                        <column datatype='string' name='location' ordinal='1' />
+                        <column datatype='real' name='exported' ordinal='2' />
+                        <column datatype='real' name='imported' ordinal='3' />
+                        <column datatype='real' name='total' ordinal='4' />
+                        <column datatype='boolean' name='inUS' ordinal='5' />
+                      </columns>
+                    </relation>
+                  </relation>
+                </relation>
+                <relation connection='textscan.0mf373g0ycmfpk14now000nz06jk' name='movesByLocation.csv1' table='[movesByLocation#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='index' ordinal='0' />
+                    <column datatype='string' name='location' ordinal='1' />
+                    <column datatype='real' name='exported' ordinal='2' />
+                    <column datatype='real' name='imported' ordinal='3' />
+                    <column datatype='real' name='total' ordinal='4' />
+                    <column datatype='boolean' name='inUS' ordinal='5' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='dogTravel' inline='true' name='federated.0l0g9gz08hu4k51clsa6t1dhc7pv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='dogTravel' name='textscan.0bkew7i08md1tn13bmv740serk6x'>
+            <connection class='textscan' directory='C:/Users/Admin/Desktop/STW7082CEM/dataset' filename='dogTravel.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0bkew7i08md1tn13bmv740serk6x' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='index' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='org_id' ordinal='2' />
+            <column datatype='string' name='url' ordinal='3' />
+            <column datatype='string' name='species' ordinal='4' />
+            <column datatype='string' name='breed_primary' ordinal='5' />
+            <column datatype='string' name='breed_secondary' ordinal='6' />
+            <column datatype='boolean' name='breed_mixed' ordinal='7' />
+            <column datatype='boolean' name='breed_unknown' ordinal='8' />
+            <column datatype='string' name='color_primary' ordinal='9' />
+            <column datatype='string' name='color_secondary' ordinal='10' />
+            <column datatype='string' name='color_tertiary' ordinal='11' />
+            <column datatype='string' name='age' ordinal='12' />
+            <column datatype='string' name='sex' ordinal='13' />
+            <column datatype='string' name='size' ordinal='14' />
+            <column datatype='string' name='coat' ordinal='15' />
+            <column datatype='boolean' name='fixed' ordinal='16' />
+            <column datatype='boolean' name='house_trained' ordinal='17' />
+            <column datatype='string' name='declawed' ordinal='18' />
+            <column datatype='boolean' name='special_needs' ordinal='19' />
+            <column datatype='boolean' name='shots_current' ordinal='20' />
+            <column datatype='boolean' name='env_children' ordinal='21' />
+            <column datatype='boolean' name='env_dogs' ordinal='22' />
+            <column datatype='boolean' name='env_cats' ordinal='23' />
+            <column datatype='string' name='name' ordinal='24' />
+            <column datatype='string' name='status' ordinal='25' />
+            <column datatype='string' name='posted' ordinal='26' />
+            <column datatype='string' name='contact_city' ordinal='27' />
+            <column datatype='string' name='contact_state' ordinal='28' />
+            <column datatype='real' name='contact_zip' ordinal='29' />
+            <column datatype='string' name='contact_country' ordinal='30' />
+            <column datatype='integer' name='stateQ' ordinal='31' />
+            <column datatype='date' name='accessed' ordinal='32' />
+            <column datatype='string' name='description' ordinal='33' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0bkew7i08md1tn13bmv740serk6x' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='index' ordinal='0' />
+            <column datatype='integer' name='id' ordinal='1' />
+            <column datatype='string' name='org_id' ordinal='2' />
+            <column datatype='string' name='url' ordinal='3' />
+            <column datatype='string' name='species' ordinal='4' />
+            <column datatype='string' name='breed_primary' ordinal='5' />
+            <column datatype='string' name='breed_secondary' ordinal='6' />
+            <column datatype='boolean' name='breed_mixed' ordinal='7' />
+            <column datatype='boolean' name='breed_unknown' ordinal='8' />
+            <column datatype='string' name='color_primary' ordinal='9' />
+            <column datatype='string' name='color_secondary' ordinal='10' />
+            <column datatype='string' name='color_tertiary' ordinal='11' />
+            <column datatype='string' name='age' ordinal='12' />
+            <column datatype='string' name='sex' ordinal='13' />
+            <column datatype='string' name='size' ordinal='14' />
+            <column datatype='string' name='coat' ordinal='15' />
+            <column datatype='boolean' name='fixed' ordinal='16' />
+            <column datatype='boolean' name='house_trained' ordinal='17' />
+            <column datatype='string' name='declawed' ordinal='18' />
+            <column datatype='boolean' name='special_needs' ordinal='19' />
+            <column datatype='boolean' name='shots_current' ordinal='20' />
+            <column datatype='boolean' name='env_children' ordinal='21' />
+            <column datatype='boolean' name='env_dogs' ordinal='22' />
+            <column datatype='boolean' name='env_cats' ordinal='23' />
+            <column datatype='string' name='name' ordinal='24' />
+            <column datatype='string' name='status' ordinal='25' />
+            <column datatype='string' name='posted' ordinal='26' />
+            <column datatype='string' name='contact_city' ordinal='27' />
+            <column datatype='string' name='contact_state' ordinal='28' />
+            <column datatype='real' name='contact_zip' ordinal='29' />
+            <column datatype='string' name='contact_country' ordinal='30' />
+            <column datatype='integer' name='stateQ' ordinal='31' />
+            <column datatype='date' name='accessed' ordinal='32' />
+            <column datatype='string' name='description' ordinal='33' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>index</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[index]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>index</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>org_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[org_id]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>org_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[url]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>url</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>species</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[species]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>species</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_primary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[breed_primary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_primary</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_secondary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[breed_secondary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_secondary</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_mixed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[breed_mixed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_mixed</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breed_unknown</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[breed_unknown]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>breed_unknown</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_primary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_primary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_primary</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_secondary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_secondary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_secondary</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>color_tertiary</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[color_tertiary]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>color_tertiary</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sex</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sex]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>sex</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>size</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[size]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>size</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>coat</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[coat]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>coat</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fixed</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[fixed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>fixed</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>house_trained</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[house_trained]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>house_trained</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>declawed</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[declawed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>declawed</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>special_needs</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[special_needs]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>special_needs</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>shots_current</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[shots_current]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>shots_current</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_children</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_children]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_children</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_dogs</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_dogs]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_dogs</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>env_cats</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[env_cats]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>env_cats</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[status]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>status</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>posted</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[posted]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>posted</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_city]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_city</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_state]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_state</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_zip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contact_zip]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_zip</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contact_country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[contact_country]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>contact_country</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stateQ</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[stateQ]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>stateQ</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accessed</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[accessed]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>accessed</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>description</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[description]</local-name>
+            <parent-name>[allDogDescriptions.csv]</parent-name>
+            <remote-alias>description</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='allDogDescriptions.csv' datatype='table' name='[__tableau_internal_object_id__].[allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341]' role='measure' type='quantitative' />
+      <column caption='Accessed' datatype='date' name='[accessed]' role='dimension' type='ordinal' />
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Breed Mixed' datatype='boolean' name='[breed_mixed]' role='dimension' type='nominal' />
+      <column caption='Breed Primary' datatype='string' name='[breed_primary]' role='dimension' type='nominal' />
+      <column caption='Breed Secondary' datatype='string' name='[breed_secondary]' role='dimension' type='nominal' />
+      <column caption='Breed Unknown' datatype='boolean' name='[breed_unknown]' role='dimension' type='nominal' />
+      <column caption='Coat' datatype='string' name='[coat]' role='dimension' type='nominal' />
+      <column caption='Color Primary' datatype='string' name='[color_primary]' role='dimension' type='nominal' />
+      <column caption='Color Secondary' datatype='string' name='[color_secondary]' role='dimension' type='nominal' />
+      <column caption='Color Tertiary' datatype='string' name='[color_tertiary]' role='dimension' type='nominal' />
+      <column caption='Contact City' datatype='string' name='[contact_city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Contact Country' datatype='string' name='[contact_country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Contact State' datatype='string' name='[contact_state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column aggregation='Sum' caption='Contact Zip' datatype='real' default-format='*00000' name='[contact_zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='Declawed' datatype='string' name='[declawed]' role='dimension' type='nominal' />
+      <column caption='Description' datatype='string' name='[description]' role='dimension' type='nominal' />
+      <column caption='Env Cats' datatype='boolean' name='[env_cats]' role='dimension' type='nominal' />
+      <column caption='Env Children' datatype='boolean' name='[env_children]' role='dimension' type='nominal' />
+      <column caption='Env Dogs' datatype='boolean' name='[env_dogs]' role='dimension' type='nominal' />
+      <column caption='Fixed' datatype='boolean' name='[fixed]' role='dimension' type='nominal' />
+      <column caption='House Trained' datatype='boolean' name='[house_trained]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Org Id' datatype='string' name='[org_id]' role='dimension' type='nominal' />
+      <column caption='Posted' datatype='string' name='[posted]' role='dimension' type='nominal' />
+      <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+      <column caption='Shots Current' datatype='boolean' name='[shots_current]' role='dimension' type='nominal' />
+      <column caption='Size' datatype='string' name='[size]' role='dimension' type='nominal' />
+      <column caption='Special Needs' datatype='boolean' name='[special_needs]' role='dimension' type='nominal' />
+      <column caption='Species' datatype='string' name='[species]' role='dimension' type='nominal' />
+      <column caption='State Q' datatype='integer' name='[stateQ]' role='measure' type='quantitative' />
+      <column caption='Status' datatype='string' name='[status]' role='dimension' type='nominal' />
+      <column caption='Url' datatype='string' name='[url]' role='dimension' type='nominal' />
+      <drill-paths>
+        <drill-path name='contact_state_travel, contact_city'>
+          <field>[contact_city]</field>
+        </drill-path>
+      </drill-paths>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='allDogDescriptions.csv' id='allDogDescriptions.csv_C791391CD4F14692BC673594E6B4C341'>
+            <properties context=''>
+              <relation connection='textscan.0bkew7i08md1tn13bmv740serk6x' name='allDogDescriptions.csv' table='[allDogDescriptions#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='index' ordinal='0' />
+                  <column datatype='integer' name='id' ordinal='1' />
+                  <column datatype='string' name='org_id' ordinal='2' />
+                  <column datatype='string' name='url' ordinal='3' />
+                  <column datatype='string' name='species' ordinal='4' />
+                  <column datatype='string' name='breed_primary' ordinal='5' />
+                  <column datatype='string' name='breed_secondary' ordinal='6' />
+                  <column datatype='boolean' name='breed_mixed' ordinal='7' />
+                  <column datatype='boolean' name='breed_unknown' ordinal='8' />
+                  <column datatype='string' name='color_primary' ordinal='9' />
+                  <column datatype='string' name='color_secondary' ordinal='10' />
+                  <column datatype='string' name='color_tertiary' ordinal='11' />
+                  <column datatype='string' name='age' ordinal='12' />
+                  <column datatype='string' name='sex' ordinal='13' />
+                  <column datatype='string' name='size' ordinal='14' />
+                  <column datatype='string' name='coat' ordinal='15' />
+                  <column datatype='boolean' name='fixed' ordinal='16' />
+                  <column datatype='boolean' name='house_trained' ordinal='17' />
+                  <column datatype='string' name='declawed' ordinal='18' />
+                  <column datatype='boolean' name='special_needs' ordinal='19' />
+                  <column datatype='boolean' name='shots_current' ordinal='20' />
+                  <column datatype='boolean' name='env_children' ordinal='21' />
+                  <column datatype='boolean' name='env_dogs' ordinal='22' />
+                  <column datatype='boolean' name='env_cats' ordinal='23' />
+                  <column datatype='string' name='name' ordinal='24' />
+                  <column datatype='string' name='status' ordinal='25' />
+                  <column datatype='string' name='posted' ordinal='26' />
+                  <column datatype='string' name='contact_city' ordinal='27' />
+                  <column datatype='string' name='contact_state' ordinal='28' />
+                  <column datatype='real' name='contact_zip' ordinal='29' />
+                  <column datatype='string' name='contact_country' ordinal='30' />
+                  <column datatype='integer' name='stateQ' ordinal='31' />
+                  <column datatype='date' name='accessed' ordinal='32' />
+                  <column datatype='string' name='description' ordinal='33' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Dashboard</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='allDogDescriptions+' name='federated.0hg0klg0w2eqzr17zo7dz056j0sf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hg0klg0w2eqzr17zo7dz056j0sf'>
+            <column caption='Color Primary' datatype='string' name='[color_primary]' role='dimension' type='nominal' />
+            <column datatype='real' name='[exported (movesByLocation.csv1)]' role='measure' type='quantitative' />
+            <column-instance column='[color_primary]' derivation='None' name='[none:color_primary:nk]' pivot='key' type='nominal' />
+            <column-instance column='[size]' derivation='None' name='[none:size:nk]' pivot='key' type='nominal' />
+            <column caption='Size' datatype='string' name='[size]' role='dimension' type='nominal' />
+            <column-instance column='[exported (movesByLocation.csv1)]' derivation='Sum' name='[sum:exported (movesByLocation.csv1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total (movesByLocation.csv1)]' derivation='Sum' name='[sum:total (movesByLocation.csv1):qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[total (movesByLocation.csv1)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:size:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[sum:exported (movesByLocation.csv1):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:size:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[sum:total (movesByLocation.csv1):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:size:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0hg0klg0w2eqzr17zo7dz056j0sf].[sum:exported (movesByLocation.csv1):qk] + [federated.0hg0klg0w2eqzr17zo7dz056j0sf].[sum:total (movesByLocation.csv1):qk])</rows>
+        <cols>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:color_primary:nk]</cols>
+      </table>
+      <simple-id uuid='{525D3E76-FD20-4795-B32A-8B0DF4AF4CD8}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='75'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:size:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[:Measure Names]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:coat:nk]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:color_primary:nk]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:contact_city (dogTravel.csv+):nk]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:inUS (movesByLocation.csv1):nk]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:location (movesByLocation.csv1):nk]</field>
+            <field>[federated.0hg0klg0w2eqzr17zo7dz056j0sf].[none:size:nk]</field>
+            <field>[federated.0l0g9gz08hu4k51clsa6t1dhc7pv].[none:coat:nk]</field>
+            <field>[federated.0l0g9gz08hu4k51clsa6t1dhc7pv].[none:contact_city:nk]</field>
+            <field>[federated.0l0g9gz08hu4k51clsa6t1dhc7pv].[none:contact_state:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2B8924C3-619F-448C-9C97-750641C2A20F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      SUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
